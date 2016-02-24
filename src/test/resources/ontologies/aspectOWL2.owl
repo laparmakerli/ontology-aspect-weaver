@@ -1,0 +1,66 @@
+Prefix(:=<http://www.corporate-semantic-web.de/ontologies/aspect/owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.corporate-semantic-web.de/ontologies/aspect/owl>
+
+Declaration(Class(:Aspect))
+Declaration(Class(:Pointcut))
+Declaration(Class(:PossibleWorld))
+Declaration(ObjectProperty(:accessible))
+Declaration(DataProperty(:hasQuery))
+Declaration(AnnotationProperty(:hasAspect))
+Declaration(AnnotationProperty(:hasPointcut))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: :hasAspect (:hasAspect)
+
+AnnotationPropertyRange(:hasAspect :Aspect)
+
+# Annotation Property: :hasPointcut (:hasPointcut)
+
+AnnotationPropertyRange(:hasPointcut :Pointcut)
+AnnotationPropertyDomain(:hasPointcut <http://www.corporate-semantic-web.de/ontologies/aspect/owl>)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :accessible (:accessible)
+
+AnnotationAssertion(rdfs:comment :accessible "Subproperties of this property may be created and used to represent accessibility relations between possible worlds. The characteristics of the subproperties determine the underlying modal logic.")
+ObjectPropertyDomain(:accessible :PossibleWorld)
+ObjectPropertyRange(:accessible :PossibleWorld)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :hasQuery (:hasQuery)
+
+DataPropertyDomain(:hasQuery :Pointcut)
+DataPropertyRange(:hasQuery rdfs:Literal)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Aspect (:Aspect)
+
+AnnotationAssertion(rdfs:comment :Aspect "Subclasses of this class represent aspects. An aspect is a truth valuation that is assigned to a part of an ontology (a set of axioms) and describes the conditions under which the part of the ontology is relevant or, in other words, provides a formal description of a validity context.
+
+Using the equivalence of modal logic and DLs, the propositional truth valuation that may or may not be true in possible worlds is reprented by this class (or its subclasses). Whether or not a proposition is true in a particular world depends on whether the world individual is an instance of the class representing the proposition. Hence the equivalence relation between Aspect and PossibleWorld.")
+EquivalentClasses(:Aspect :PossibleWorld)
+
+
+)
