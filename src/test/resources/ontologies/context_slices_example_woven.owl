@@ -1,0 +1,783 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://csw.inf.fu-berlin.de/aood/context_slices_example_woven"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://csw.inf.fu-berlin.de/aood/context_slices_example_woven">
+    <Prefix name="" IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example_woven#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="aspect_owl" IRI="http://www.corporate-semantic-web.de/ontologies/aspect_owl#"/>
+    <Prefix name="ace_lexicon" IRI="http://attempto.ifi.uzh.ch/ace_lexicon#"/>
+    <Prefix name="ContextSlices" IRI="http://example.org/ContextSlices#"/>
+    <Prefix name="context_slices_example" IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#"/>
+    <Declaration>
+        <Class abbreviatedIRI="context_slices_example:Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="context_slices_example:CreationismContext"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="context_slices_example:ReligionCommunity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ContextSlices:Context"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ContextSlices:ContextualProjection"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:AccessRestriction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:Advice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:Aspect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:BuiltInAspect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:Compatibility"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:ExternalAspect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:FunctionalAspect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:NonfunctionalAspect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:PointCut"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:Provenance"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:ProvenanceBasedTrust"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="aspect_owl:Trust"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="context_slices_example:believes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="context_slices_example:createdBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ContextSlices:hasContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="ContextSlices:projectionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aspect_owl:associatedObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aspect_owl:equallyComplex"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aspect_owl:hasAdvice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aspect_owl:hasPointcut"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aspect_owl:lessComplexThan"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="aspect_owl:moreComplexThan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="context_slices_example:ChristianCreationismContext"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="context_slices_example:ChristianFundamentalChurch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="context_slices_example:Earth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="context_slices_example:God"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="context_slices_example:IslamicCreationismContext"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="context_slices_example:IslamicFundamentalChurch"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#Earth@CreationismContext"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#God@CreationismContext"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aspect_owl:BaseModule"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aspect_owl:OwlELComplexity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aspect_owl:OwlQLComplexity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="aspect_owl:OwlRLComplexity"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="aspect_owl:hasAspect"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="aspect_owl:ProvenanceBasedTrust"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="aspect_owl:Provenance"/>
+            <Class abbreviatedIRI="aspect_owl:Trust"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class abbreviatedIRI="context_slices_example:CreationismContext"/>
+        <Class abbreviatedIRI="ContextSlices:Context"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:AccessRestriction"/>
+        <Class abbreviatedIRI="aspect_owl:ExternalAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:AccessRestriction"/>
+        <Class abbreviatedIRI="aspect_owl:NonfunctionalAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:Aspect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aspect_owl:hasAdvice"/>
+            <Class abbreviatedIRI="aspect_owl:Advice"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:Aspect"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="aspect_owl:hasPointcut"/>
+            <Class abbreviatedIRI="aspect_owl:PointCut"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:BuiltInAspect"/>
+        <Class abbreviatedIRI="aspect_owl:Aspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:Compatibility"/>
+        <Class abbreviatedIRI="aspect_owl:ExternalAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:Compatibility"/>
+        <Class abbreviatedIRI="aspect_owl:NonfunctionalAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:ExternalAspect"/>
+        <Class abbreviatedIRI="aspect_owl:Aspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:FunctionalAspect"/>
+        <Class abbreviatedIRI="aspect_owl:Aspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:NonfunctionalAspect"/>
+        <Class abbreviatedIRI="aspect_owl:Aspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:Provenance"/>
+        <Class abbreviatedIRI="aspect_owl:ExternalAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:Provenance"/>
+        <Class abbreviatedIRI="aspect_owl:NonfunctionalAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+        <Class abbreviatedIRI="aspect_owl:BuiltInAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+        <Class abbreviatedIRI="aspect_owl:NonfunctionalAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:Trust"/>
+        <Class abbreviatedIRI="aspect_owl:ExternalAspect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="aspect_owl:Trust"/>
+        <Class abbreviatedIRI="aspect_owl:NonfunctionalAspect"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class abbreviatedIRI="aspect_owl:BuiltInAspect"/>
+        <Class abbreviatedIRI="aspect_owl:ExternalAspect"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="context_slices_example:CreationismContext"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:ChristianCreationismContext"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="context_slices_example:ReligionCommunity"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:ChristianFundamentalChurch"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:Earth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:God"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="context_slices_example:CreationismContext"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:IslamicCreationismContext"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="context_slices_example:ReligionCommunity"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:IslamicFundamentalChurch"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ContextSlices:ContextualProjection"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#Earth@CreationismContext"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="ContextSlices:ContextualProjection"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#God@CreationismContext"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aspect_owl:Aspect"/>
+        <NamedIndividual abbreviatedIRI="aspect_owl:BaseModule"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+        <NamedIndividual abbreviatedIRI="aspect_owl:OwlELComplexity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+        <NamedIndividual abbreviatedIRI="aspect_owl:OwlQLComplexity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+        <NamedIndividual abbreviatedIRI="aspect_owl:OwlRLComplexity"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="context_slices_example:believes"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:ChristianFundamentalChurch"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:ChristianCreationismContext"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="context_slices_example:believes"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:IslamicFundamentalChurch"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:IslamicCreationismContext"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="context_slices_example:createdBy"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#Earth@CreationismContext"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#God@CreationismContext"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ContextSlices:hasContext"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#Earth@CreationismContext"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:IslamicCreationismContext"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ContextSlices:hasContext"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#Earth@CreationismContext"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:ChristianCreationismContext"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ContextSlices:projectionOf"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#Earth@CreationismContext"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:Earth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ContextSlices:hasContext"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#God@CreationismContext"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:IslamicCreationismContext"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ContextSlices:hasContext"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#God@CreationismContext"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:ChristianCreationismContext"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="ContextSlices:projectionOf"/>
+        <NamedIndividual IRI="http://csw.inf.fu-berlin.de/aood/context_slices_example#God@CreationismContext"/>
+        <NamedIndividual abbreviatedIRI="context_slices_example:God"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty abbreviatedIRI="aspect_owl:lessComplexThan"/>
+        <ObjectProperty abbreviatedIRI="aspect_owl:moreComplexThan"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="aspect_owl:associatedObject"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="aspect_owl:associatedObject"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="ContextSlices:hasContext"/>
+        <Class abbreviatedIRI="ContextSlices:ContextualProjection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="ContextSlices:projectionOf"/>
+        <Class abbreviatedIRI="ContextSlices:ContextualProjection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aspect_owl:associatedObject"/>
+        <Class abbreviatedIRI="aspect_owl:Aspect"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aspect_owl:equallyComplex"/>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aspect_owl:lessComplexThan"/>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="aspect_owl:moreComplexThan"/>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="ContextSlices:hasContext"/>
+        <Class abbreviatedIRI="ContextSlices:Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aspect_owl:equallyComplex"/>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aspect_owl:lessComplexThan"/>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="aspect_owl:moreComplexThan"/>
+        <Class abbreviatedIRI="aspect_owl:ReasoningComplexity"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty abbreviatedIRI="aspect_owl:equallyComplex"/>
+        <ObjectProperty abbreviatedIRI="aspect_owl:lessComplexThan"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty abbreviatedIRI="aspect_owl:equallyComplex"/>
+        <ObjectProperty abbreviatedIRI="aspect_owl:moreComplexThan"/>
+    </DisjointObjectProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:AccessRestriction</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">AccessRestrictions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:AccessRestriction</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">AccessRestriction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:AccessRestriction</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">AccessRestriction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:Advice</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Advices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:Advice</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Advice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:Advice</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Advice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:Aspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Aspects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:Aspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Aspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:Aspect</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Aspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <AbbreviatedIRI>aspect_owl:BaseModule</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">BaseModule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>aspect_owl:BaseModule</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdfs;Literal">This is the default aspect. All expressions which are not covered by an explicit aspect definition are automatically part of the base module. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:BuiltInAspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">BuiltInAspects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:BuiltInAspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">BuiltInAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:BuiltInAspect</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BuiltInAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:Compatibility</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Compatibilities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:Compatibility</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Compatibility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:Compatibility</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Compatibility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:ExternalAspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ExternalAspects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:ExternalAspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ExternalAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:ExternalAspect</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ExternalAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:FunctionalAspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FunctionalAspects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:FunctionalAspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">FunctionalAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:FunctionalAspect</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">FunctionalAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:NonfunctionalAspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">NonfunctionalAspects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:NonfunctionalAspect</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">NonfunctionalAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:NonfunctionalAspect</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">NonfunctionalAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <AbbreviatedIRI>aspect_owl:OwlELComplexity</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">OwlELComplexity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:description"/>
+        <AbbreviatedIRI>aspect_owl:OwlELComplexity</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Represents the reasoning complexity of the OWL-EL fragment of OWL 2 (which is PTIME-complete measured with respect to the total size of the assertions and the total size of the axioms in the ontology).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:OwlELComplexity</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">OwlELComplexity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <AbbreviatedIRI>aspect_owl:OwlQLComplexity</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">OwlQLComplexity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:OwlQLComplexity</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">OwlQLComplexity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:PN_sg"/>
+        <AbbreviatedIRI>aspect_owl:OwlRLComplexity</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">OwlRLComplexity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:OwlRLComplexity</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">OwlRLComplexity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:PointCut</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PointCuts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:PointCut</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PointCut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:PointCut</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PointCut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:Provenance</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Provenances</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:Provenance</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Provenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:Provenance</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Provenane</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:ProvenanceBasedTrust</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ProvenanceBasedTrusts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:ProvenanceBasedTrust</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ProvenanceBasedTrust</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:ProvenanceBasedTrust</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ProvenanceBasedTrust</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:ReasoningComplexity</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ReasoningComplexities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:ReasoningComplexity</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ReasoningComplexity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:ReasoningComplexity</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ReasoningComplexity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_pl"/>
+        <AbbreviatedIRI>aspect_owl:Trust</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Trusts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:CN_sg"/>
+        <AbbreviatedIRI>aspect_owl:Trust</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Trust</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:Trust</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Trust</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <AbbreviatedIRI>aspect_owl:associatedObject</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">associatedObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <AbbreviatedIRI>aspect_owl:associatedObject</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">associatedObjects</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <AbbreviatedIRI>aspect_owl:associatedObject</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">associatedObjected</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:associatedObject</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">associatedObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <AbbreviatedIRI>aspect_owl:equallyComplex</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">equallyComplex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <AbbreviatedIRI>aspect_owl:equallyComplex</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">equallyComplexes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <AbbreviatedIRI>aspect_owl:equallyComplex</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">equallyComplexed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:equallyComplex</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">equallyComplex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <AbbreviatedIRI>aspect_owl:hasAdvice</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasAdvice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <AbbreviatedIRI>aspect_owl:hasAdvice</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasAdvices</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <AbbreviatedIRI>aspect_owl:hasAdvice</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasAdviced</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:hasAdvice</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasAdvice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:hasAspect</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <AbbreviatedIRI>aspect_owl:hasPointcut</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasPointcut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <AbbreviatedIRI>aspect_owl:hasPointcut</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasPointcuts</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <AbbreviatedIRI>aspect_owl:hasPointcut</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasPointcuted</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:hasPointcut</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasPointcut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <AbbreviatedIRI>aspect_owl:lessComplexThan</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">lessComplexThan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <AbbreviatedIRI>aspect_owl:lessComplexThan</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">lessComplexThans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <AbbreviatedIRI>aspect_owl:lessComplexThan</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">lessComplexThaned</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:lessComplexThan</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">lessComplexThan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_pl"/>
+        <AbbreviatedIRI>aspect_owl:moreComplexThan</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">moreComplexThan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_sg"/>
+        <AbbreviatedIRI>aspect_owl:moreComplexThan</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">moreComplexThans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="ace_lexicon:TV_vbg"/>
+        <AbbreviatedIRI>aspect_owl:moreComplexThan</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">moreComplexThaned</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>aspect_owl:moreComplexThan</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">moreComplexThan</Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty abbreviatedIRI="aspect_owl:hasAspect"/>
+        <AbbreviatedIRI>aspect_owl:Aspect</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

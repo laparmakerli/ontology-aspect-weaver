@@ -1,0 +1,17 @@
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://example.org/ContextSlices>
+
+Declaration(Class(<http://example.org/ContextSlices#Context>))
+Declaration(Class(<http://example.org/ContextSlices#ContextualProjection>))
+Declaration(ObjectProperty(<http://example.org/ContextSlices#hasContext>))
+Declaration(ObjectProperty(<http://example.org/ContextSlices#projectionOf>))
+ObjectPropertyDomain(<http://example.org/ContextSlices#hasContext> <http://example.org/ContextSlices#ContextualProjection>)
+ObjectPropertyRange(<http://example.org/ContextSlices#hasContext> <http://example.org/ContextSlices#Context>)
+ObjectPropertyDomain(<http://example.org/ContextSlices#projectionOf> <http://example.org/ContextSlices#ContextualProjection>)
+)

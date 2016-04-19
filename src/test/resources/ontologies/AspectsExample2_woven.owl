@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://csw.inf.fu-berlin.de/aood/example_woven#"
+     xml:base="http://csw.inf.fu-berlin.de/aood/example_woven"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:example2="http://csw.inf.fu-berlin.de/aood/example2#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:aspect_owl="http://www.corporate-semantic-web.de/ontologies/aspect_owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://csw.inf.fu-berlin.de/aood/example_woven"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#isCapitalOf -->
+
+    <owl:ObjectProperty rdf:about="http://csw.inf.fu-berlin.de/aood/example2#isCapitalOf">
+        <rdfs:domain rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#City"/>
+        <rdfs:range rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.corporate-semantic-web.de/ontologies/aspect_owl#hasAspect -->
+
+    <owl:ObjectProperty rdf:about="http://www.corporate-semantic-web.de/ontologies/aspect_owl#hasAspect"/>
+    
+
+
+    <!-- http://www.corporate-semantic-web.de/ontologies/aspect_owl#hasAspect_value -->
+
+    <owl:ObjectProperty rdf:about="http://www.corporate-semantic-web.de/ontologies/aspect_owl#hasAspect_value"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#hasBeginning -->
+
+    <owl:DatatypeProperty rdf:about="http://csw.inf.fu-berlin.de/aood/example2#hasBeginning">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#hasEnd -->
+
+    <owl:DatatypeProperty rdf:about="http://csw.inf.fu-berlin.de/aood/example2#hasEnd">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#City -->
+
+    <owl:Class rdf:about="http://csw.inf.fu-berlin.de/aood/example2#City"/>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#Country -->
+
+    <owl:Class rdf:about="http://csw.inf.fu-berlin.de/aood/example2#Country"/>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#TemporalAspect -->
+
+    <owl:Class rdf:about="http://csw.inf.fu-berlin.de/aood/example2#TemporalAspect">
+        <rdfs:subClassOf rdf:resource="http://www.corporate-semantic-web.de/ontologies/aspect_owl#FunctionalAspect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#TimeIntervalBerlinCapital -->
+
+    <owl:Class rdf:about="http://csw.inf.fu-berlin.de/aood/example2#TimeIntervalBerlinCapital">
+        <rdfs:subClassOf rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#TemporalAspect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#TimeIntervalBonnCapital -->
+
+    <owl:Class rdf:about="http://csw.inf.fu-berlin.de/aood/example2#TimeIntervalBonnCapital">
+        <rdfs:subClassOf rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#TemporalAspect"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.corporate-semantic-web.de/ontologies/aspect_owl#FunctionalAspect -->
+
+    <owl:Class rdf:about="http://www.corporate-semantic-web.de/ontologies/aspect_owl#FunctionalAspect"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DateTimeInterval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DateTimeInterval"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#Berlin -->
+
+    <owl:NamedIndividual rdf:about="http://csw.inf.fu-berlin.de/aood/example2#Berlin">
+        <rdf:type rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#City"/>
+        <aspect_owl:hasAspect rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#isCapitalOf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#Bonn -->
+
+    <owl:NamedIndividual rdf:about="http://csw.inf.fu-berlin.de/aood/example2#Bonn">
+        <rdf:type rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#City"/>
+        <aspect_owl:hasAspect rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#isCapitalOf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://csw.inf.fu-berlin.de/aood/example2#Germany">
+        <rdf:type rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#IntervalBerlinCapital -->
+
+    <owl:NamedIndividual rdf:about="http://csw.inf.fu-berlin.de/aood/example2#IntervalBerlinCapital">
+        <rdf:type rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#TimeIntervalBerlinCapital"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <example2:hasBeginning rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1949-11-29</example2:hasBeginning>
+        <example2:hasEnd rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-10-03</example2:hasEnd>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#IntervalBonnCapital -->
+
+    <owl:NamedIndividual rdf:about="http://csw.inf.fu-berlin.de/aood/example2#IntervalBonnCapital">
+        <rdf:type rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#TimeIntervalBonnCapital"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#DateTimeInterval"/>
+        <example2:hasBeginning rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-10-03</example2:hasBeginning>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/example2#isCapitalOf -->
+
+    <owl:NamedIndividual rdf:about="http://csw.inf.fu-berlin.de/aood/example2#isCapitalOf">
+        <aspect_owl:hasAspect_value rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#IntervalBerlinCapital"/>
+        <aspect_owl:hasAspect_value rdf:resource="http://csw.inf.fu-berlin.de/aood/example2#IntervalBonnCapital"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+

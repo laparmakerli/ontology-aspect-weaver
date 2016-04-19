@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY context_slices_example "http://csw.inf.fu-berlin.de/aood/context_slices_example#" >
+    <!ENTITY aspect_owl "http://www.corporate-semantic-web.de/ontologies/aspect_owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://csw.inf.fu-berlin.de/aood/context_slices_example#"
+     xml:base="http://csw.inf.fu-berlin.de/aood/context_slices_example"
+     xmlns:context_slices_example="http://csw.inf.fu-berlin.de/aood/context_slices_example#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:aspect_owl="http://www.corporate-semantic-web.de/ontologies/aspect_owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://csw.inf.fu-berlin.de/aood/context_slices_example">
+        <owl:imports rdf:resource="http://example.org/ContextSlices"/>
+        <owl:imports rdf:resource="http://www.corporate-semantic-web.de/ontologies/aspect_owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#believes -->
+
+    <owl:ObjectProperty rdf:about="&context_slices_example;believes"/>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#createdBy -->
+
+    <owl:ObjectProperty rdf:about="&context_slices_example;createdBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#Agent -->
+
+    <owl:Class rdf:about="&context_slices_example;Agent"/>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#CreationismContext -->
+
+    <owl:Class rdf:about="&context_slices_example;CreationismContext">
+        <rdfs:subClassOf rdf:resource="http://example.org/ContextSlices#Context"/>
+    </owl:Class>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#ReligionCommunity -->
+
+    <owl:Class rdf:about="&context_slices_example;ReligionCommunity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#ChristianCreationismContext -->
+
+    <owl:NamedIndividual rdf:about="&context_slices_example;ChristianCreationismContext">
+        <rdf:type rdf:resource="&context_slices_example;CreationismContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#ChristianFundamentalChurch -->
+
+    <owl:NamedIndividual rdf:about="&context_slices_example;ChristianFundamentalChurch">
+        <rdf:type rdf:resource="&context_slices_example;ReligionCommunity"/>
+        <believes rdf:resource="&context_slices_example;ChristianCreationismContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#Earth -->
+
+    <owl:Thing rdf:about="&context_slices_example;Earth">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <createdBy rdf:resource="&context_slices_example;God"/>
+    </owl:Thing>
+    <owl:Axiom>
+        <aspect_owl:hasAspect rdf:resource="&context_slices_example;CreationismContext"/>
+        <owl:annotatedSource rdf:resource="&context_slices_example;Earth"/>
+        <owl:annotatedTarget rdf:resource="&context_slices_example;God"/>
+        <owl:annotatedProperty rdf:resource="&context_slices_example;createdBy"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#God -->
+
+    <owl:Thing rdf:about="&context_slices_example;God">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#IslamicCreationismContext -->
+
+    <owl:NamedIndividual rdf:about="&context_slices_example;IslamicCreationismContext">
+        <rdf:type rdf:resource="&context_slices_example;CreationismContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://csw.inf.fu-berlin.de/aood/context_slices_example#IslamicFundamentalChurch -->
+
+    <owl:NamedIndividual rdf:about="&context_slices_example;IslamicFundamentalChurch">
+        <rdf:type rdf:resource="&context_slices_example;ReligionCommunity"/>
+        <believes rdf:resource="&context_slices_example;IslamicCreationismContext"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
