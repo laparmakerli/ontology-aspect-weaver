@@ -9,6 +9,7 @@ Depending on the different requirements on an ontology for different application
 
 An implementation of this approach is described [here](http://www.diss.fu-berlin.de/docs/servlets/MCRFileNodeServlet/FUDOCS_derivate_000000005284/CSCReport2015.pdf), where aspects are modeled as OWL2-classes that can be connected to arbitrary axioms via OWL2-annotation properties, meaning that the semantics of the axiom is valid in the context of the corresponding aspect. As defined in ... "Annotations carry no semantics in the OWL 2 Direct Semantics". Therefore they are ignored by description logic reasoners.
 
+
 # Aspect Weaver
 
 The purpose of this Aspect Weaver is translating aspect-ontologies automatically into, in particular concerning the semantics added by aspects, fully interpretable OWL2 ontologies. The Aspect Weaver brings together the knowledge defined in the different modules on a level suited for machine processing.
@@ -27,4 +28,3 @@ Since the projection property can only be applied to individuals this pattern is
 ## N'ary Relation Pattern
 
 Another possible way for modeling aspects with OWL standard functionality is using n-ary relations. A corresponding ontology design pattern is presented [here](http://ontologydesignpatterns.org/wiki/Submissions:N-Ary_Relation_Pattern_(OWL_2)).  A property between two entities with an aspect assertion is modeled as an 3-ary relation between the 2 entities and the aspect.
-git config --global
